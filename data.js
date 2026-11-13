@@ -1,5 +1,8 @@
 // Datos de la Noche de los Museos 2026 - Córdoba
 // Fuente: https://nochedelosmuseos.unc.edu.ar/museos-del-interior-provincial/
+//
+// rating / reseñas: puntuación de referencia según reseñas públicas
+// (Google Maps o Tripadvisor, indicado en "fuente"). null = sin reseñas públicas suficientes.
 
 const LOCALIDADES = [
   { id: "cosquin", nombre: "Cosquín", emoji: "🪕" },
@@ -25,6 +28,9 @@ const MUSEOS = [
       { tipo: "Sitio oficial", url: "https://nochedelosmuseos.unc.edu.ar/museos/museo-del-artesano/" }
     ],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 3.8,
+    resenas: 12,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Casa Museo Mujica Lainez",
@@ -38,6 +44,9 @@ const MUSEOS = [
     web: "http://www.fundacionmujicalainez.org",
     redes: [],
     programacion: "Visitas guiadas al público durante la noche.",
+    rating: 4.4,
+    resenas: 314,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Museo de Arte Luis José Pisano",
@@ -53,6 +62,9 @@ const MUSEOS = [
       { tipo: "Facebook", url: "https://www.facebook.com/museopictorico.pisano/" }
     ],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 4.7,
+    resenas: 34,
+    fuente: "Google",
   },
   {
     nombre: "Museo de Historia y Patrimonio de La Cumbre",
@@ -82,6 +94,9 @@ const MUSEOS = [
       { tipo: "Instagram", url: "https://www.instagram.com/museomiguelocampo" }
     ],
     programacion: "Noche de los Museos 2026 con actividades especiales.",
+    rating: 4.7,
+    resenas: 181,
+    fuente: "Google",
   },
   {
     nombre: "Hotel Edén",
@@ -98,6 +113,9 @@ const MUSEOS = [
       { tipo: "Instagram", url: "https://www.instagram.com/edenhotel_lafalda/" }
     ],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 4.2,
+    resenas: 1004,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Museo Arqueológico Argentino Ambato",
@@ -174,6 +192,9 @@ const MUSEOS = [
     web: null,
     redes: [],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 4.6,
+    resenas: null,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Paseo con Ciencia",
@@ -191,6 +212,9 @@ const MUSEOS = [
       { tipo: "Instagram", url: "https://www.instagram.com/paseo.con.ciencia" }
     ],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 4.5,
+    resenas: 26,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Museo Arqueológico Numba Charava",
@@ -207,6 +231,9 @@ const MUSEOS = [
       { tipo: "Instagram", url: "https://www.instagram.com/museo_numba_charava" }
     ],
     programacion: "Actividades y recorridos culturales durante toda la noche.",
+    rating: 4.0,
+    resenas: 43,
+    fuente: "Tripadvisor",
   },
   {
     nombre: "Museo MET",
@@ -223,5 +250,8 @@ const MUSEOS = [
       { tipo: "Instagram", url: "https://www.instagram.com/museomet" }
     ],
     programacion: "Noche de los Museos 2026 con actividades especiales.",
+    rating: 5.0,
+    resenas: null,
+    fuente: "Tripadvisor",
   },
 ];

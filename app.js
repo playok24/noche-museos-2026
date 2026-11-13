@@ -26,6 +26,25 @@ function escapeHtml(texto) {
   return div.innerHTML;
 }
 
+/* ---------- Estrellas (reseñas) ---------- */
+function estrellasHtml(m) {
+  if (m.rating == null) {
+    return `<div class="rating sin-rating" title="Aún sin reseñas públicas suficientes">☆ Sin reseñas públicas</div>`;
+  }
+  const porcentaje = Math.round((m.rating / 5) * 1000) / 10;
+  const cantidad =
+    m.resenas != null ? `${m.resenas} reseñas` : `reseñas de ${m.fuente || "Google"}`;
+  return `
+    <div class="rating" title="${m.rating} de 5 según reseñas de ${m.fuente || "Google"}">
+      <span class="rating-estrellas" aria-hidden="true">
+        <span class="rating-fondo">★★★★★</span>
+        <span class="rating-llenas" style="width:${porcentaje}%">★★★★★</span>
+      </span>
+      <span class="rating-num">${m.rating.toFixed(1).replace(".", ",")}</span>
+      <span class="rating-info">${cantidad} · ${m.fuente || "Google"}</span>
+    </div>`;
+}
+
 /* ---------- Tabs ---------- */
 function crearTabs() {
   const cont = document.getElementById("tabs");
@@ -90,6 +109,7 @@ function renderListado() {
         <article class="tarjeta" data-lat="${m.lat}" data-lng="${m.lng}">
           <span class="localidad-chip">${infoLoc.emoji} ${infoLoc.nombre}</span>
           <h3>${escapeHtml(m.nombre)}</h3>
+          ${estrellasHtml(m)}
           <p class="direccion">📍 <strong>${escapeHtml(m.direccionCorta)}</strong></p>
           ${tel}
           <p class="descripcion">${escapeHtml(m.descripcion)}</p>
@@ -119,6 +139,7 @@ function popupHtml(m) {
   return `
     <div>
       <div class="popup-nombre">${escapeHtml(m.nombre)}</div>
+      ${m.rating != null ? `<div class="popup-rating">★ ${m.rating.toFixed(1).replace(".", ",")} · ${m.fuente || "Google"}</div>` : ""}
       <div class="popup-dir">📍 ${escapeHtml(m.direccionCorta)}</div>
       <a class="popup-llegar" href="${linkGoogleMaps(m)}" target="_blank" rel="noopener">🧭 Cómo llegar</a>
     </div>`;

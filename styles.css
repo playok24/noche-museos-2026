@@ -318,6 +318,57 @@ body {
   color: var(--texto-suave);
 }
 
+/* ---------- ESTRELLAS / RESEÑAS ---------- */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 2px 0 10px;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+.rating-estrellas {
+  position: relative;
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #4a4463;
+}
+.rating-llenas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--dorado);
+  text-shadow: 0 0 8px rgba(245, 200, 66, 0.45);
+}
+.rating-num {
+  font-weight: 700;
+  color: var(--dorado);
+  font-size: 0.95rem;
+}
+.rating-info {
+  font-size: 0.78rem;
+}
+.rating.sin-rating {
+  font-size: 0.8rem;
+  opacity: 0.65;
+  margin: 2px 0 10px;
+}
+
+/* Estrellas dentro del popup del mapa */
+.popup-rating {
+  color: var(--dorado);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 2px 0 4px;
+}
+.leaflet-popup-content .popup-rating {
+  margin: 2px 0 4px;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 640px) {
   .hero { padding: 60px 16px 50px; }
