@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noche de los Museos 2026 · Punilla y Carlos Paz</title>
+  <meta name="description" content="Guía de la Noche de los Museos 2026 en Cosquín, La Cumbre, La Falda, Los Cocos, Valle Hermoso y Villa Carlos Paz. Direcciones, horarios y mapa interactivo." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-contenido">
+      <p class="hero-pre">🎓 UNC · Municipalidad de Córdoba · Gobierno de la Provincia</p>
+      <h1>Noche de los Museos <span class="ano">2026</span></h1>
+      <p class="hero-sub">Viernes 13 de noviembre · de 20 a 01 h</p>
+      <p class="hero-texto">Una noche de arte, historia, ciencia y espectáculos en el valle de Punilla y Villa Carlos Paz.</p>
+      <div class="hero-botones">
+        <a href="#museos" class="btn btn-primario">Ver museos</a>
+        <a href="#mapa" class="btn btn-secundario">Abrir el mapa</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BUSCADOR -->
+  <section class="buscador-seccion">
+    <div class="buscador-contenedor">
+      <input type="search" id="buscador" placeholder="🔍 Buscar museo por nombre o dirección..." autocomplete="off" />
+    </div>
+  </section>
+
+  <!-- PESTAÑAS POR LOCALIDAD -->
+  <nav class="tabs" id="tabs" aria-label="Filtrar por localidad"></nav>
+
+  <!-- LISTADO DE MUSEOS -->
+  <main class="listado" id="listado"></main>
+
+  <!-- MAPA -->
+  <section class="seccion-mapa" id="mapa">
+    <h2>🗺️ Mapa interactivo</h2>
+    <p class="mapa-ayuda">Tocá un marcador para ver el museo y abrilo en Google Maps.</p>
+    <div id="leaflet"></div>
+    <p class="mapa-nota">La ubicación de los marcadores es referencial. Para la navegación exacta, usá el botón <strong>«Cómo llegar»</strong> de cada museo, que abre Google Maps con la dirección oficial.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Información obtenida del <a href="https://nochedelosmuseos.unc.edu.ar/museos-del-interior-provincial/" target="_blank" rel="noopener">sitio oficial de la Noche de los Museos 2026</a>.</p>
+    <p class="footer-momento">Viernes 13 de noviembre de 2026 · 20 a 01 h · Córdoba, Argentina 🇦🇷</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
